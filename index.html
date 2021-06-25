@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS_DZ31</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+<h1>Домашние работы №31, №32</h1>
+<ul class="menu" id="M">
+    <li><a href="#" class="chosen" onclick="showBlock(1)">Поля ввода</a></li>
+    <li><a href="#" onclick="showBlock(2)">Картинка</a></li>
+    <li><a href="#" onclick="showBlock(3)">Светофор</a></li>
+    <li><a href="#" onclick="showBlock(4)">Комментарии</a></li>
+    <li><a href="#" onclick="showBlock(5)">Реклама</a></li>
+</ul>
+
+<div class="tasks">
+    <div id="task1">
+        <p class="task-name">Обмен содержимым</p>
+        <input type="text" class="task1__text_1">
+        <input type="text" class="task1__text_1">
+        <input type="button" value="Заменить"
+               onclick=swapText()
+               name="btn1-1" id="swapButton">
+
+        <p class="task-name">Проверка количества символов</p>
+        <label class="symbols">5 символов: <input type="text" class="task1__text_2" data-length="5"
+                                                  placeholder="_ _ _ _ _"></label>
+        <label class="symbols">10 символов: <input type="text" class="task1__text_2" data-length="10"
+                                                   placeholder="_ _ _ _ _ _ _ _ _ _"></label>
+        <label class="symbols">7 символов: <input type="text" class="task1__text_2" data-length="7"
+                                                  placeholder="_ _ _ _ _ _ _"></label>
+        <label class="symbols">2 символа: <input type="text" class="task1__text_2" data-length="2"
+                                                 placeholder="_ _"></label>
+    </div>
+
+    <div id="task2">
+        <img src="images/M1.jpg" alt="pic1">
+    </div>
+
+    <div id="task3">
+        <div class="lights lred active"></div>
+        <div class="lights lyellow"></div>
+        <div class="lights lgreen"></div>
+        <input type="button" value="->"
+               onclick=changeLight()
+               id="btn3">
+    </div>
+
+    <div id="task4">
+        <label>Ваше имя: <input type="text" class="task4__text" placeholder="Имя"></label>
+        <textarea id="comment" cols="30" rows="5"></textarea>
+        <input type="button" value="Оставить комментарий"
+               onclick=comment();
+               id="btn4">
+        <div class="commentList">
+            <span class="comment__name">Комментатор 1</span>
+            <span class="comment__date">01.01.2021 14:48</span>
+            <p class="comment__text">Только у программиста фразы «Все повисло» и «Все встало» означают одно и то же.</p>
+        </div>
+    </div>
+
+    <div id="task5">
+        <div class="task5__content">
+            <img src="images/banner.jpg" alt="pic2" id="advertisement">
+            <div class="close" onclick="hideBanner()">X ЗАКРЫТЬ</div>
+            <p class="time">10</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="JS/DZ_31.js"></script>
+</body>
+</html>
